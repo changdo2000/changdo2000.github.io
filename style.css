@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #111;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .dot {
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.role {
+    color: gray;
+    font-weight: normal;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 40px;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: none;
+}
+
+.intro h1 {
+    font-size: 3rem;
+}
+
+.intro h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.intro p {
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;                /* Căn giữa */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn.yellow {
+    background: #f4b400;
+}
+
+.btn.red {
+    background: #f44336;
+}
+
+.btn.blue {
+    background: #4dd0e1;
+    color: #000;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    font-size: 0.85rem;
+    gap: 20px;
+}
+
+.footer-item a i {
+    font-size: 28px;
+    margin: 2px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-item a:hover i {
+    background-color: #f0f0f0; /* Hover nhẹ */
+    transform: scale(1.1);
+}
+.copyright {
+    flex-basis: 100%;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+    }
+}
