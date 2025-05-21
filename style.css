@@ -9,6 +9,25 @@ body {
     background: #fff;
     color: #111;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Phần nội dung chính sẽ chiếm phần còn lại */
+main {
+    flex: 1;
 }
 
 .header {
@@ -126,11 +145,13 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
-    padding: 40px 20px;
+    /*padding: 40px 20px;*/
     background: #f9f9f9;
     border-top: 1px solid #ddd;
     font-size: 0.85rem;
     gap: 20px;
+
+    padding: 1rem;
 }
 
 .footer-item a i {
