@@ -1,0 +1,47 @@
+{
+  "position": "BE Dev / Alpha researcher",
+  "company": "INF-Capital",
+  "duration": "Feb 2023 - Present",
+  "sections": [
+    {
+      "title": "Systems",
+      "items": [
+        {
+          "title": "Alpha Research System",
+          "description": "Build a system that helps build, test, evaluate and manage alphas. Helps alpha researchers use data from different sources, features, labels and automatically evaluate and compare alphas with each other."
+        },
+        {
+          "title": "Strategy visualization tool",
+          "description": "Build and maintain tools to visualize indicators, strategy execution processes, and backtest results. It helps experts combine indicators, conditions and commands to build strategies and evaluate those strategies."
+        },
+        {
+          "title": "Backtesting tool",
+          "description": "Simulating prices and brokers helps experts test their strategies on many types of data and brokers. Provide strategic assessment metrics. Run a series of strategies to optimize strategy parameters."
+        },
+        {
+          "title": "Strategies",
+          "description": "Implement strategies from experts to run backtests and live trading."
+        }
+      ],
+      "tech_stack": [
+        "Python", "Numpy", "Pandas", "Plotly", "High-chart", "Streamlit", "Ta-lib", "Sklearn", "Pytorch", "Statsmodels", "Redis"
+      ]
+    },
+    {
+      "title": "Alphas",
+      "items": [
+        {
+          "title": "Alpha Research",
+          "description": "Learn and explore approaches to building an alpha using machine learning. Learn how to label financial data. Use features to train alpha. Provide alpha evaluation metrics."
+        },
+        {
+          "title": "Price simulation",
+          "description": "Simulate prices using statistical methods and machine learning to test alphas."
+        }
+      ],
+      "tech_stack": [
+        "Python", "Numpy", "Pandas", "Plotly", "Ta-lib", "Sklearn", "Pytorch", "Statsmodels", "GBM", "Autoencoder"
+      ]
+    }
+  ]
+}
