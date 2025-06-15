@@ -75,9 +75,30 @@
             margin-bottom: 30px;
             font-style: italic;
         }
+        .download-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            background-image: url('assets/images/download-button.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 9999;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .download-icon:hover {
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 <body>
+<a href="./NguyenTrungHai-CV.pdf" download class="download-icon"></a>
+
 <div class="page">
     <div class="header">
         <div>Hanoi, Vietnam</div>
