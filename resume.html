@@ -42,13 +42,25 @@
         .job-header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-weight: bold;
             margin-top: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Gạch mờ để làm nổi hơn */
+            padding-bottom: 6px;
+            background-color: #f9f9f9; /* Tùy chọn: nền sáng nhẹ */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Tùy chọn: đổ bóng nhẹ */
         }
+
+
         .subsection {
-            font-style: italic;
+            /*font-style: normal;*/
+            font-weight: bold;
             margin-top: 5px;
+            /*font-family: 'B', sans-serif;*/
+            /*border-bottom: 1px solid rgba(0, 0, 0, 0.2); !* Gạch mờ *!*/
+            /*padding-bottom: 2px;*/
         }
+        .
         ul {
             margin-top: 5px;
             margin-bottom: 10px;
@@ -59,6 +71,7 @@
         }
         .tech {
             margin-top: -5px;
+            margin-bottom: 30px;
             font-style: italic;
         }
     </style>
@@ -82,17 +95,99 @@
         <div>Base.vn</div>
         <div>Mar 2024- Present</div>
     </div>
-
-    <div class="subsection">Base ID</div>
-    <ul>
-        <li><strong>Authentication Server (OAuth 2.0 & OIDC)</strong>: Built and maintained a centralized authentication server compliant with OAuth 2.0 and OpenID Connect (OIDC) standards. Implemented core features including Single Sign-On (SSO), Multi-Factor Authentication (MFA), and SAML integration to provide a seamless and secure login experience.</li>
-        <li><strong>Centralized Authorization Service</strong>:  Engineered a centralized authorization service based on <strong>Google's Zanzibar model</strong>. This system enables fine-grained, relationship-based access control (ReBAC) and standard role-based access control (RBAC) for all integrated applications within the ecosystem.</li>
-        <li><strong>Customer Identity & Access Management (CIAM)</strong>: Engineered the CIAM system, featuring User and Tenant Lifecycle Management, Client (Application) Management, and Domain Verification. Automated user provisioning and de-provisioning processes to enhance security and operational efficiency.</li>
-        <li><strong>Real-time Multi-tenant Notification System</strong>: Designed and built a real-time notification system to solve the challenges of delivering messages efficiently and securely in a multi-tenant environment with thousands of distinct customers.</li>
+    <div class="subsection">Base ID: Identity as a Service Platform</div>
+    <ul style="margin-bottom: 20px;">
+        <li>
+            <strong>Authentication Server (OAuth 2.0 & OIDC)</strong>: Took a lead role in building and enhancing the central authentication server, ensuring security, standard compliance, and scalability.
+            <ul>
+                <li>Implemented standard-compliant OAuth 2.0 flows and OpenID Connect for secure token issuance.</li>
+                <li>Integrated SAML 2.0 protocol to enable Single Sign-On (SSO) for enterprise users from external Identity Providers.</li>
+                <li>Enhanced protocol security with countermeasures against CSRF, PKCE, DPOP, replay attacks, and ensured secure client secret storage. Rate limiting and account lockout policies to mitigate brute-force attacks.</li>
+                <li>Developed and integrated multiple verification methods for Multi-Factor Authentication (MFA), including the magic link, TOTP, SMS.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Centralized Authorization Service (via OpenFGA)</strong>: Leveraged <strong>OpenFGA</strong> (Google's Zanzibar implementation) to establish a centralized, fine-grained authorization system.
+            <ul>
+                <li>Developed the service responsible for writing relationship tuples to the OpenFGA API, ensuring permission data was consistently synced from our application.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Customer Identity & Access Management (CIAM)</strong>: Developed features for comprehensive customer identity administration.
+            <ul>
+                <li>Implemented APIs to manage the complete user and tenant lifecycle, tenant relationship from creation and updates to deactivation and deletion.</li>
+                <li>Built APIs and UIs for administrators to register client applications and verify organizational domains.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Real-time Multi-tenant Notification System</strong>: Architected a high-performance system to address the challenge of delivering real-time alerts in a multi-tenant environment.
+            <ul>
+                <li>Designed an architecture using Server Sent Event and RabbitMQ to ensure low-latency, high-throughput delivery while maintaining strict data isolation between tenants. </li>
+            </ul>
+        </li>
     </ul>
-    <div class="tech">Tech stack: Go, Redis, PostgreSQL.</div>
+    <div class="tech">Tech stack: Go Gin, GORM , Redis, PostgreSQL, Docker, JWT.</div>
 
 
+    <div class="subsection">Base Talk: Peer to peer call and video conference</div>
+    <ul style="margin-bottom: 20px;">
+        <li>
+            <strong>Real-time Infrastructure (WebRTC)</strong>: Architected the backend services powering real-time video, audio, and data communication for Base Talk.
+            <ul>
+                <li>Developed the high-performance, WebSocket-based signaling server responsible for negotiating peer connections via SDP and ICE candidates.</li>
+                <li>Use SIP protocol for signaling.</li>
+                <li>Deployed, configured, and managed STUN/TURN servers to enable reliable peer-to-peer connections across complex network topologies (NAT traversal).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Call Lifecycle & State Management</strong>: Built the core application logic for managing meeting rooms and participants.
+            <ul>
+                <li>Developed REST APIs and WebSocket events for the entire meeting lifecycle (scheduling, creating, joining, leaving, ending).</li>
+                <li>Used Redis for real-time state management of participants.</li>
+            </ul>
+        </li>
+<!--        <li>-->
+<!--            <strong>Advanced Features Development</strong>: Engineered key features to enhance the collaboration experience.-->
+<!--            <ul>-->
+<!--                <li>Built the server-side recording module, including a service that programmatically joins rooms, captures media streams from the SFU, and composites them into a final video file stored in object storage.</li>-->
+<!--                <li>Developed the real-time, low-latency text chat functionality for in-meeting communication.</li>-->
+<!--            </ul>-->
+<!--        </li>-->
+    </ul>
+    <div class="tech">Tech stack: Go Gin, GORM , Redis, PostgreSQL, Docker, JWT.</div>
+
+    <div class="subsection">Base DrivePro: A centralized cloud storage platform that helps businesses securely manage all digital assets, synchronize instant access across all devices, and streamline collaboration.</div>
+    <ul style="margin-bottom: 20px;">
+        <li>
+            <strong>Core File Synchronization Engine</strong>: Architected and developed the backend services powering Base DrivePro's file management and synchronization.
+            <ul>
+                <li>Developed the file upload/download APIs.</li>
+                <li>Developed file management.</li>
+                <li>Designed the database schema to efficiently store file metadata, version history, and user relationships.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Secure Sharing & Collaboration</strong>: Built the features enabling secure multi-user collaboration.
+            <ul>
+                <li>Integrated with the central authorization service (e.g., OpenFGA) to enforce granular, role-based permissions on files and folders.</li>
+                <li>Developed functionality for creating and managing various types of shareable links (public, password-protected, expiring).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Asynchronous Asset Processing Pipeline</strong>: Designed a scalable, message-driven pipeline to process uploaded assets.
+            <ul>
+                <li>Stored processed and original assets in an S3-compatible object storage (e.g., FCI, GCP).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Search and Discovery</strong>: Implemented a robust search capability across the entire platform.
+            <ul>
+                <li>Built a content indexing service that extracted text from documents (PDFs, Docs) and fed it into Elasticsearch.</li>
+                <li>Developed search APIs that supported full-text queries, filtering by metadata, and permission-aware results.</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tech">Tech stack: Go Gin, GORM , Redis, PostgreSQL, Docker, JWT.</div>
     <!-- End of Base.vn Experience -->
 
 
