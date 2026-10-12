@@ -1,0 +1,28 @@
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Cloudflare Wrangler
+.wrangler/
+
+# Node / Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and media files
+*.mp4
+*.tmp
+*.log
+
+# Environment variables
+.env
+.env.local
