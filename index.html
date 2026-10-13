@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyễn Trung Hải – Backend Software Engineer</title>
-    <meta name="description" content="Portfolio của Nguyễn Trung Hải - Backend Software Engineer tại Base.vn chuyên về Go, PostgreSQL, Redis, WebRTC và hệ thống phân tán.">
+    <meta name="description" content="Portfolio của Nguyễn Trung Hải - Software Engineer tại VPBank Security chuyên về Go, PostgreSQL, Redis và hệ thống phân tán.">
     <meta name="author" content="Nguyễn Trung Hải">
-    <link rel="icon" type="image/png" href="./assets/images/profile.png">
+
+    <!-- Favicon: Modern SVG with PNG fallback -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="./assets/images/profile.png">
 
     <!-- Fonts: Bricolage Grotesque & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +32,6 @@
             </a>
             <nav class="nav-right" aria-label="Main Navigation">
                 <a href="resume.html" class="nav-link" data-i18n="navResume">Resume / CV</a>
-                <a href="./NguyenTrungHai-CV.pdf" target="_blank" class="nav-link" data-i18n="navDownload">Tải PDF</a>
                 <a href="#contact" class="nav-link" data-i18n="navContact">Liên hệ</a>
 
                 <span class="nav-divider"></span>
@@ -59,7 +61,7 @@
                     Xin chào, tôi là Nguyễn Trung Hải.
                 </h1>
                 <p class="hero-desc" data-i18n="heroText">
-                    Tôi là kỹ sư backend tại Base.vn, xây dựng hệ thống định danh, giao tiếp thời gian thực và lưu trữ đám mây bằng Go. Trước đó tôi làm nền tảng nghiên cứu và giao dịch định lượng.
+                    Tôi là kỹ sư phần mềm tại VPBank Security, chuyên xây dựng các hệ thống backend hiệu năng cao, bảo mật và dịch vụ tài chính bằng Go. Trước đó tôi làm nền tảng nghiên cứu và giao dịch định lượng.
                 </p>
 
                 <!-- PROFILE BADGE WITH AVATAR -->
@@ -67,7 +69,7 @@
                     <img src="assets/images/avatar.jpg" alt="Nguyễn Trung Hải" class="profile-avatar-img">
                     <div class="profile-info">
                         <div class="profile-name" data-i18n="profileName">Nguyễn Trung Hải</div>
-                        <div class="profile-role">Backend Software Engineer · Base.vn</div>
+                        <div class="profile-role">Software Engineer · VPBank Security</div>
                         <div class="profile-badge">
                             <span class="status-dot"></span>
                             <span data-i18n="profileStatus">Sẵn sàng kết nối & hợp tác kỹ thuật</span>
@@ -75,16 +77,13 @@
                     </div>
                 </div>
 
-                <!-- ACTIONS: CV & CONTACT -->
+                <!-- ACTIONS: RESUME & CONTACT (NO PDF DOWNLOAD) -->
                 <div class="hero-actions">
                     <a href="resume.html" class="btn-primary" data-i18n="ctaResume">
                         <i class="fa-solid fa-file-lines"></i>&nbsp; Xem Resume / CV
                     </a>
-                    <a href="./NguyenTrungHai-CV.pdf" target="_blank" class="btn-secondary" data-i18n="ctaDownload">
-                        <i class="fa-regular fa-file-pdf"></i>&nbsp; Tải PDF CV
-                    </a>
                     <a href="#contact" class="btn-secondary" data-i18n="ctaContact">
-                        <i class="fa-regular fa-envelope"></i>&nbsp; Liên hệ
+                        <i class="fa-regular fa-envelope"></i>&nbsp; Liên hệ với tôi
                     </a>
                 </div>
             </div>
@@ -108,10 +107,10 @@
                     <br>
                     <div><span class="kw">var</span> me = Developer{</div>
                     <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Name</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str" data-i18n="devName">"Nguyễn Trung Hải"</span>,</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Role</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Backend Software Engineer"</span>,</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Company</span>:&nbsp;&nbsp;<span class="str">"Base.vn"</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Role</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Software Engineer"</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Company</span>:&nbsp;&nbsp;<span class="str">"VPBank Security"</span>,</div>
                     <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Location</span>: <span class="str">"Hanoi, Vietnam"</span>,</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Stack</span>:&nbsp;&nbsp;&nbsp;&nbsp;[]string{<span class="str">"Go"</span>, <span class="str">"PostgreSQL"</span>, <span class="str">"Redis"</span>, <span class="str">"WebRTC"</span>},</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Stack</span>:&nbsp;&nbsp;&nbsp;&nbsp;[]string{<span class="str">"Go"</span>, <span class="str">"PostgreSQL"</span>, <span class="str">"Redis"</span>, <span class="str">"Fintech"</span>},</div>
                     <div>}</div>
                 </div>
             </div>
@@ -125,7 +124,7 @@
                     Có ý tưởng hay vị trí phù hợp? Hãy trò chuyện.
                 </h2>
                 <p class="contact-text" data-i18n="contactText">
-                    Nếu bạn muốn trao đổi về backend, hệ thống thời gian thực hay nền tảng định danh, cứ gửi email cho tôi.
+                    Nếu bạn muốn trao đổi về backend, hệ thống phân tán hay cơ hội nghề nghiệp, cứ gửi email cho tôi.
                 </p>
                 <a href="mailto:haint.haui@gmail.com" class="contact-email-btn">
                     <i class="fa-regular fa-envelope"></i>&nbsp; haint.haui@gmail.com
@@ -142,9 +141,6 @@
                     </a>
                     <a href="resume.html" class="social-btn">
                         <i class="fa-solid fa-file-lines"></i> Resume (Web)
-                    </a>
-                    <a href="./NguyenTrungHai-CV.pdf" target="_blank" class="social-btn">
-                        <i class="fa-regular fa-file-pdf"></i> Tải PDF CV
                     </a>
                 </div>
             </div>
@@ -166,20 +162,18 @@
                 themeLabel: 'Sáng',
                 themeAria: 'Chuyển sang giao diện sáng',
                 navResume: 'Resume / CV',
-                navDownload: 'Tải PDF',
                 navContact: 'Liên hệ',
                 heroBadge: 'Backend Software Engineer',
                 heroTitle: 'Xin chào, tôi là Nguyễn Trung Hải.',
-                heroText: 'Tôi là kỹ sư backend tại Base.vn, xây dựng hệ thống định danh, giao tiếp thời gian thực và lưu trữ đám mây bằng Go. Trước đó tôi làm nền tảng nghiên cứu và giao dịch định lượng.',
+                heroText: 'Tôi là kỹ sư phần mềm tại VPBank Security, chuyên xây dựng các hệ thống backend hiệu năng cao, bảo mật và dịch vụ tài chính bằng Go. Trước đó tôi làm nền tảng nghiên cứu và giao dịch định lượng.',
                 devName: '"Nguyễn Trung Hải"',
                 profileName: 'Nguyễn Trung Hải',
                 profileStatus: 'Sẵn sàng kết nối & hợp tác kỹ thuật',
                 ctaResume: 'Xem Resume / CV',
-                ctaDownload: 'Tải PDF CV',
-                ctaContact: 'Liên hệ',
+                ctaContact: 'Liên hệ với tôi',
                 contactLabel: '// liên hệ',
                 contactTitle: 'Có ý tưởng hay vị trí phù hợp? Hãy trò chuyện.',
-                contactText: 'Nếu bạn muốn trao đổi về backend, hệ thống thời gian thực hay nền tảng định danh, cứ gửi email cho tôi.',
+                contactText: 'Nếu bạn muốn trao đổi về backend, hệ thống phân tán hay cơ hội nghề nghiệp, cứ gửi email cho tôi.',
                 footerCopy: '© 2026 Nguyễn Trung Hải · Built with Go mindset',
                 backToTop: 'Lên đầu trang ↑'
             },
@@ -187,20 +181,18 @@
                 themeLabel: 'Light',
                 themeAria: 'Switch to light theme',
                 navResume: 'Resume / CV',
-                navDownload: 'Download PDF',
                 navContact: 'Contact',
                 heroBadge: 'Backend Software Engineer',
                 heroTitle: "Hi, I'm Trung Hai.",
-                heroText: "I'm a backend engineer at Base.vn, building identity, real-time communication and cloud storage systems in Go. Before that, I worked on a quantitative research and trading platform.",
+                heroText: "I'm a software engineer at VPBank Security, building high-performance, secure backend systems and financial services in Go. Before that, I worked on a quantitative research and trading platform.",
                 devName: '"Trung Hai"',
                 profileName: 'Trung Hai',
                 profileStatus: 'Open to engineering collaboration',
                 ctaResume: 'View Resume / CV',
-                ctaDownload: 'Download PDF CV',
-                ctaContact: 'Contact Me',
+                ctaContact: 'Get in touch',
                 contactLabel: '// contact',
                 contactTitle: "Got an idea or a role in mind? Let's talk.",
-                contactText: 'If you want to talk about backend, real-time systems or identity platforms, send me an email.',
+                contactText: 'If you want to talk about backend, distributed systems or opportunities, feel free to drop me an email.',
                 footerCopy: '© 2026 Trung Hai · Built with Go mindset',
                 backToTop: 'Back to top ↑'
             }

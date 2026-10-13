@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151B23"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7B7"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Square -->
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#232C37" stroke-width="2"/>
+  
+  <!-- Subtle Security Shield Silhouette -->
+  <path d="M32 11 L48 17 V28 C48 38 41 46 32 51 C23 46 16 38 16 28 V17 Z" fill="none" stroke="url(#accent)" stroke-width="1.8" opacity="0.32"/>
+  
+  <!-- Terminal Prompt >_ -->
+  <path d="M22 25 L31 32 L22 39" fill="none" stroke="url(#accent)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="35" y1="39" x2="43" y2="39" stroke="url(#accent)" stroke-width="4.5" stroke-linecap="round"/>
+</svg>
