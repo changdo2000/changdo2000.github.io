@@ -1,62 +1,563 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About me</title>
-    <link rel="icon"  type="image/png" href="./assets/images/profile.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Trung Hai – Backend Software Engineer</title>
+    <meta name="description" content="Portfolio của Nguyen Trung Hai - Backend Software Engineer tại Base.vn chuyên về Go, PostgreSQL, Redis, WebRTC và hệ thống phân tán.">
+    <meta name="author" content="Nguyen Trung Hai">
+    <link rel="icon" type="image/png" href="./assets/images/profile.png">
 
+    <!-- Fonts: Bricolage Grotesque & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-    <div class="logo">
-        <span class="dot"></span>
-        <strong>About me</strong>
-    </div>
-    <nav class="nav">
-        <a href="resume.html">Resume</a>
-        <a href="#">Projects</a>
-        <a href="#">Certificates</a>
-    </nav>
-</header>
 
-<main class="main">
-    <div class="profile-pic">
-        <img src="assets/images/avatar.jpg" alt="Profile" />
-    </div>
-    <div class="intro">
-        <h1>Hello, I'm Hai!</h1>
-<!--        <h3>I'm Hai</h3>-->
-        <p>
-            I'm a Software Engineer with 4 years of experience, specializing in backend development using Python and Golang.
-        </p>
-        <div class="buttons">
-            <a href="resume.html" class="btn yellow">Resume</a>
-            <a href="#" class="btn red">Projects</a>
-            <a href="#" class="btn blue">Certificates</a>
-        </div>
-    </div>
-</main>
+    <!-- NAVBAR -->
+    <div class="navbar-wrap">
+        <header class="container navbar">
+            <a href="#top" class="logo-brand">
+                nguyen-trung-hai<span class="dot-accent">.go</span>
+            </a>
+            <nav class="nav-right" aria-label="Main Navigation">
+                <a href="#about" class="nav-link" data-i18n="navAbout">Giới thiệu</a>
+                <a href="#skills" class="nav-link" data-i18n="navSkills">Kỹ năng</a>
+                <a href="#projects" class="nav-link" data-i18n="navProjects">Dự án</a>
+                <a href="#experience" class="nav-link" data-i18n="navExperience">Kinh nghiệm</a>
+                <a href="resume.html" class="nav-link" data-i18n="navResume">Resume / CV</a>
+                <a href="#contact" class="nav-link" data-i18n="navContact">Liên hệ</a>
 
-<footer class="footer">
-    <div class="footer-item">
-        <strong>Phone</strong><br />
-<!--        123-456-7890-->
-        *******************
+                <span class="nav-divider"></span>
+
+                <button id="btn-vi" class="lang-btn active" aria-label="Chuyển sang Tiếng Việt">VI</button>
+                <button id="btn-en" class="lang-btn" aria-label="Switch to English">EN</button>
+
+                <button id="btn-theme" class="theme-toggle-btn" aria-label="Chuyển đổi giao diện Sáng / Tối">
+                    <span id="theme-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+                    </span>
+                    <span id="theme-text" data-i18n="themeLabel">Sáng</span>
+                </button>
+            </nav>
+        </header>
     </div>
-    <div class="footer-item">
-        <strong>Email</strong><br />
-       haint.haui@gmail.com
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO -->
+        <section id="top" class="container hero-section">
+            <div class="hero-left">
+                <div class="hero-tag">
+                    <span>//</span> <span data-i18n="heroBadge">Backend Software Engineer</span>
+                </div>
+                <h1 class="hero-title" data-i18n="heroTitle">
+                    Xin chào, tôi là Nguyen Trung Hai.
+                </h1>
+                <p class="hero-desc" data-i18n="heroText">
+                    Tôi là kỹ sư backend tại Base.vn, xây dựng hệ thống định danh, giao tiếp thời gian thực và lưu trữ đám mây bằng Go. Trước đó tôi làm nền tảng nghiên cứu và giao dịch định lượng.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary" data-i18n="ctaProjects">Xem dự án</a>
+                    <a href="#contact" class="btn-secondary" data-i18n="ctaContact">Liên hệ với tôi</a>
+                    <a href="resume.html" class="btn-secondary" data-i18n="ctaResume">Xem CV chi tiết</a>
+                </div>
+            </div>
+
+            <!-- GO CODE TERMINAL WINDOW -->
+            <div class="hero-right">
+                <div class="code-header">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="code-filename">about.go</span>
+                </div>
+                <div class="code-body">
+                    <div><span class="kw">package</span> main</div>
+                    <br>
+                    <div><span class="kw">type</span> Developer <span class="kw">struct</span> {</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Name</span>, <span class="key">Role</span>, <span class="key">Location</span> <span class="ty">string</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Company</span>               <span class="ty">string</span></div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Stack</span>                 <span class="ty">[]string</span></div>
+                    <div>}</div>
+                    <br>
+                    <div><span class="kw">var</span> me = Developer{</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Name</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Nguyen Trung Hai"</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Role</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Backend Software Engineer"</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Company</span>:&nbsp;&nbsp;<span class="str">"Base.vn"</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Location</span>: <span class="str">"Hanoi, Vietnam"</span>,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">Stack</span>:&nbsp;&nbsp;&nbsp;&nbsp;[]string{<span class="str">"Go"</span>, <span class="str">"PostgreSQL"</span>, <span class="str">"Redis"</span>, <span class="str">"WebRTC"</span>},</div>
+                    <div>}</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section id="about" class="section">
+            <div class="container section-split">
+                <div class="section-heading-col">
+                    <div class="section-tag" data-i18n="aboutLabel">01 / giới thiệu</div>
+                    <h2 class="section-title" data-i18n="aboutTitle">Về tôi</h2>
+                </div>
+                <div class="section-content-col">
+                    <div class="about-texts">
+                        <p data-i18n="about1">
+                            Tôi là kỹ sư phần mềm ở Hà Nội, làm backend tại Base.vn từ tháng 3/2024. Tôi bắt đầu với lập trình thi đấu và các dự án thị giác máy tính, rồi chuyển sang xây dựng hệ thống backend hiệu năng cao.
+                        </p>
+                        <p data-i18n="about2">
+                            Ở Base.vn, tôi làm trên nền tảng định danh (OAuth 2.0, OIDC, SAML SSO, MFA, phân quyền chi tiết bằng OpenFGA), hệ thống thông báo thời gian thực đa tenant, hạ tầng gọi video WebRTC và nền tảng lưu trữ đám mây Base DrivePro.
+                        </p>
+                        <p data-i18n="about3">
+                            Trước đó tôi xây dựng nền tảng nghiên cứu và giao dịch định lượng tại INF-Capital. Tôi từng được vinh danh Pioneer Engineer of the year tại Base.vn (2024) và đạt nhiều giải lập trình thi đấu sinh viên.
+                        </p>
+                    </div>
+
+                    <!-- PROFILE CARD (FEATURING AVATAR) -->
+                    <div class="profile-card">
+                        <img src="assets/images/avatar.jpg" alt="Nguyen Trung Hai" class="profile-avatar-img">
+                        <div class="profile-info">
+                            <div class="profile-name">Nguyen Trung Hai</div>
+                            <div class="profile-role">Backend Software Engineer · Base.vn</div>
+                            <div class="profile-badge">
+                                <span class="status-dot"></span>
+                                <span data-i18n="profileStatus">Sẵn sàng hợp tác & kết nối kỹ thuật</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KEY FACTS -->
+                    <div class="about-facts-grid">
+                        <div class="fact-card">
+                            <div class="fact-label" data-i18n="factRoleLabel">VỊ TRÍ</div>
+                            <div class="fact-val" data-i18n="factRoleVal">Software Engineer · Base.vn</div>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-label" data-i18n="factLocLabel">ĐỊA ĐIỂM</div>
+                            <div class="fact-val" data-i18n="factLocVal">Hà Nội, Việt Nam</div>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-label" data-i18n="factEduLabel">HỌC VẤN</div>
+                            <div class="fact-val" data-i18n="factEduVal">Đại học Công nghiệp Hà Nội</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div style="margin-bottom: 36px;">
+                    <div class="section-tag" data-i18n="skillsLabel">02 / kỹ năng</div>
+                    <h2 class="section-title" data-i18n="skillsTitle">Công nghệ tôi dùng</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-card-title">Backend</div>
+                        <div class="skill-chips">
+                            <span class="skill-chip">Go</span>
+                            <span class="skill-chip">Gin</span>
+                            <span class="skill-chip">GORM</span>
+                            <span class="skill-chip">Python</span>
+                            <span class="skill-chip">Elixir</span>
+                            <span class="skill-chip">C/C++</span>
+                            <span class="skill-chip">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-title" data-i18n="skillDataTitle">Dữ liệu & Hàng đợi</div>
+                        <div class="skill-chips">
+                            <span class="skill-chip">PostgreSQL</span>
+                            <span class="skill-chip">MySQL</span>
+                            <span class="skill-chip">Redis</span>
+                            <span class="skill-chip">RabbitMQ</span>
+                            <span class="skill-chip">Elasticsearch</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-title" data-i18n="skillRealtimeTitle">Thời gian thực</div>
+                        <div class="skill-chips">
+                            <span class="skill-chip">WebRTC</span>
+                            <span class="skill-chip">WebSocket</span>
+                            <span class="skill-chip">SSE</span>
+                            <span class="skill-chip">STUN/TURN</span>
+                            <span class="skill-chip">SIP</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-title" data-i18n="skillInfraTitle">Bảo mật & Hạ tầng</div>
+                        <div class="skill-chips">
+                            <span class="skill-chip">OAuth 2.0</span>
+                            <span class="skill-chip">OIDC</span>
+                            <span class="skill-chip">SAML 2.0</span>
+                            <span class="skill-chip">OpenFGA</span>
+                            <span class="skill-chip">JWT</span>
+                            <span class="skill-chip">Docker</span>
+                            <span class="skill-chip">GCP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div style="margin-bottom: 36px;">
+                    <div class="section-tag" data-i18n="projectsLabel">03 / dự án</div>
+                    <h2 class="section-title" data-i18n="projectsTitle">Một vài thứ tôi đã làm</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 01 -->
+                    <div class="project-card">
+                        <div class="project-num">01</div>
+                        <div class="project-title">Base ID</div>
+                        <div class="project-subtitle" data-i18n="proj1Sub">Nền tảng định danh (Identity as a Service)</div>
+                        <p class="project-desc" data-i18n="proj1Desc">
+                            Máy chủ xác thực OAuth 2.0 / OIDC, SSO qua SAML 2.0, MFA (magic link, TOTP, SMS), phân quyền chi tiết bằng OpenFGA và hệ thống thông báo thời gian thực đa tenant với SSE và RabbitMQ.
+                        </p>
+                        <div class="project-tech">Go · Gin · GORM · PostgreSQL · Redis · Docker · JWT · OpenFGA</div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="project-card">
+                        <div class="project-num">02</div>
+                        <div class="project-title">Base Talk</div>
+                        <div class="project-subtitle" data-i18n="proj2Sub">Gọi và họp video ngang hàng</div>
+                        <p class="project-desc" data-i18n="proj2Desc">
+                            Hạ tầng WebRTC: signaling server qua WebSocket (SDP, ICE), SIP, STUN/TURN cho NAT traversal, cùng API quản lý vòng đời cuộc họp và trạng thái người tham gia lưu trữ trên Redis.
+                        </p>
+                        <div class="project-tech">Go · Gin · GORM · PostgreSQL · Redis · WebRTC · WebSocket · Docker</div>
+                    </div>
+
+                    <!-- Project 03 -->
+                    <div class="project-card">
+                        <div class="project-num">03</div>
+                        <div class="project-title">Base DrivePro</div>
+                        <div class="project-subtitle" data-i18n="proj3Sub">Nền tảng lưu trữ đám mây cho doanh nghiệp</div>
+                        <p class="project-desc" data-i18n="proj3Desc">
+                            Đồng bộ file, chia sẻ có phân quyền (link công khai, có mật khẩu, thời hạn hết hạn), pipeline xử lý tài nguyên bất đồng bộ và tìm kiếm toàn văn tốc độ cao bằng Elasticsearch.
+                        </p>
+                        <div class="project-tech">Go · Gin · GORM · PostgreSQL · Redis · Elasticsearch · S3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section">
+            <div class="container section-split">
+                <div class="section-heading-col">
+                    <div class="section-tag" data-i18n="experienceLabel">04 / kinh nghiệm</div>
+                    <h2 class="section-title" data-i18n="experienceTitle">Hành trình nghề nghiệp</h2>
+                </div>
+                <div class="section-content-col">
+                    <div class="jobs-list">
+                        <!-- Job 1 -->
+                        <div class="job-item">
+                            <div class="job-period" data-i18n="job1Period">03/2024 – Nay</div>
+                            <div class="job-main">
+                                <div class="job-role">Software Engineer</div>
+                                <div class="job-org">Base.vn</div>
+                                <p class="job-desc" data-i18n="job1Desc">Backend cho Base ID, Base Talk và Base DrivePro bằng Go.</p>
+                            </div>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="job-item">
+                            <div class="job-period">02/2023 – 03/2024</div>
+                            <div class="job-main">
+                                <div class="job-role">Software Engineer / Alpha Researcher</div>
+                                <div class="job-org">INF-Capital</div>
+                                <p class="job-desc" data-i18n="job2Desc">Nền tảng nghiên cứu và giao dịch định lượng: Alpha Factory, backtesting, công cụ trực quan hóa chiến lược và mô phỏng giá.</p>
+                            </div>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="job-item">
+                            <div class="job-period">05/2022 – 02/2023</div>
+                            <div class="job-main">
+                                <div class="job-role">Back End Developer</div>
+                                <div class="job-org">Skyquant</div>
+                                <p class="job-desc" data-i18n="job3Desc">Tác vụ tự động cho hệ thống bot và hệ thống crawler thu thập dữ liệu bằng Elixir và Python.</p>
+                            </div>
+                        </div>
+
+                        <!-- Job 4 -->
+                        <div class="job-item">
+                            <div class="job-period">01/2020 – 04/2022</div>
+                            <div class="job-main">
+                                <div class="job-role" data-i18n="job4Role">Thực tập kỹ sư phần mềm</div>
+                                <div class="job-org">Cyber Eye Technology, Genisys</div>
+                                <p class="job-desc" data-i18n="job4Desc">Nhận diện giấy tờ tùy thân bằng MobileNetV2 và tiền xử lý ảnh cho OCR; trực quan hóa dữ liệu và giao dịch tự động trên MT5.</p>
+                            </div>
+                        </div>
+
+                        <!-- Job 5 -->
+                        <div class="job-item">
+                            <div class="job-period">2018 – 2025</div>
+                            <div class="job-main">
+                                <div class="job-role" data-i18n="job5Role">Giải thưởng nổi bật</div>
+                                <div class="job-org" data-i18n="job5Org">Lập trình thi đấu & Doanh nghiệp</div>
+                                <p class="job-desc" data-i18n="job5Desc">Pioneer Engineer of the year, Base.vn (2024) · Giải Ba AI Innovation Challenge, Base.vn (2025) · Giải Nhất Olympic Tin học sinh viên Việt Nam (2020) · Giải Ba ACM-ICPC khu vực (2018, 2021).</p>
+                            </div>
+                        </div>
+
+                        <!-- Job 6 -->
+                        <div class="job-item">
+                            <div class="job-period" data-i18n="job6Period">2018 – Nay</div>
+                            <div class="job-main">
+                                <div class="job-role" data-i18n="job6Role">Đại học Công nghiệp Hà Nội</div>
+                                <div class="job-org" data-i18n="job6Org">Điện tử và Kỹ thuật truyền thông</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-cta-wrap">
+                        <a href="resume.html" class="btn-primary" data-i18n="btnViewFullResume">Xem chi tiết toàn bộ CV (Resume Web)</a>
+                        <a href="NguyenTrungHai-CV.pdf" target="_blank" class="btn-secondary" style="margin-left: 10px;" data-i18n="btnDownloadPDF">
+                            <i class="fa-regular fa-file-pdf"></i> Tải PDF CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-box">
+                <div class="section-tag" data-i18n="contactLabel">05 / liên hệ</div>
+                <h2 class="contact-title" data-i18n="contactTitle">
+                    Có ý tưởng hay vị trí phù hợp? Hãy trò chuyện.
+                </h2>
+                <p class="contact-text" data-i18n="contactText">
+                    Nếu bạn muốn trao đổi về backend, hệ thống thời gian thực hay nền tảng định danh, cứ gửi email cho tôi.
+                </p>
+                <a href="mailto:haint.haui@gmail.com" class="contact-email-btn">
+                    <i class="fa-regular fa-envelope"></i>&nbsp; haint.haui@gmail.com
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/changdo2000" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/trung-hai-nguyen-282a96225/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/haint299" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="resume.html" class="social-btn">
+                        <i class="fa-solid fa-file-lines"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div class="footer-wrap">
+        <footer class="container footer">
+            <span>© 2026 Nguyen Trung Hai · Built with Go mindset</span>
+            <a href="#top" class="back-to-top" data-i18n="backToTop">Lên đầu trang ↑</a>
+        </footer>
     </div>
-    <div class="footer-item">
-        <strong>Follow Me</strong><br />
-        <a href="https://github.com/changdo2000" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-        <a href="https://www.linkedin.com/in/trung-hai-nguyen-282a96225/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://www.facebook.com/haint299" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
-    </div>
-</footer>
+
+    <!-- SCRIPT FOR I18N AND THEME TOGGLE -->
+    <script>
+        const i18nData = {
+            vi: {
+                themeLabel: 'Sáng',
+                themeAria: 'Chuyển sang giao diện sáng',
+                navAbout: 'Giới thiệu',
+                navSkills: 'Kỹ năng',
+                navProjects: 'Dự án',
+                navExperience: 'Kinh nghiệm',
+                navResume: 'Resume / CV',
+                navContact: 'Liên hệ',
+                heroBadge: 'Backend Software Engineer',
+                heroTitle: 'Xin chào, tôi là Nguyen Trung Hai.',
+                heroText: 'Tôi là kỹ sư backend tại Base.vn, xây dựng hệ thống định danh, giao tiếp thời gian thực và lưu trữ đám mây bằng Go. Trước đó tôi làm nền tảng nghiên cứu và giao dịch định lượng.',
+                ctaProjects: 'Xem dự án',
+                ctaContact: 'Liên hệ với tôi',
+                ctaResume: 'Xem CV chi tiết',
+                aboutLabel: '01 / giới thiệu',
+                aboutTitle: 'Về tôi',
+                about1: 'Tôi là kỹ sư phần mềm ở Hà Nội, làm backend tại Base.vn từ tháng 3/2024. Tôi bắt đầu với lập trình thi đấu và các dự án thị giác máy tính, rồi chuyển sang xây dựng hệ thống backend hiệu năng cao.',
+                about2: 'Ở Base.vn, tôi làm trên nền tảng định danh (OAuth 2.0, OIDC, SAML SSO, MFA, phân quyền chi tiết bằng OpenFGA), hệ thống thông báo thời gian thực đa tenant, hạ tầng gọi video WebRTC và nền tảng lưu trữ đám mây Base DrivePro.',
+                about3: 'Trước đó tôi xây dựng nền tảng nghiên cứu và giao dịch định lượng tại INF-Capital. Tôi từng được vinh danh Pioneer Engineer of the year tại Base.vn (2024) và đạt nhiều giải lập trình thi đấu sinh viên.',
+                profileStatus: 'Sẵn sàng hợp tác & kết nối kỹ thuật',
+                factRoleLabel: 'VỊ TRÍ',
+                factRoleVal: 'Software Engineer · Base.vn',
+                factLocLabel: 'ĐỊA ĐIỂM',
+                factLocVal: 'Hà Nội, Việt Nam',
+                factEduLabel: 'HỌC VẤN',
+                factEduVal: 'Đại học Công nghiệp Hà Nội',
+                skillsLabel: '02 / kỹ năng',
+                skillsTitle: 'Công nghệ tôi dùng',
+                skillDataTitle: 'Dữ liệu & Hàng đợi',
+                skillRealtimeTitle: 'Thời gian thực',
+                skillInfraTitle: 'Bảo mật & Hạ tầng',
+                projectsLabel: '03 / dự án',
+                projectsTitle: 'Một vài thứ tôi đã làm',
+                proj1Sub: 'Nền tảng định danh (Identity as a Service)',
+                proj1Desc: 'Máy chủ xác thực OAuth 2.0 / OIDC, SSO qua SAML 2.0, MFA (magic link, TOTP, SMS), phân quyền chi tiết bằng OpenFGA và hệ thống thông báo thời gian thực đa tenant với SSE và RabbitMQ.',
+                proj2Sub: 'Gọi và họp video ngang hàng',
+                proj2Desc: 'Hạ tầng WebRTC: signaling server qua WebSocket (SDP, ICE), SIP, STUN/TURN cho NAT traversal, cùng API quản lý vòng đời cuộc họp và trạng thái người tham gia lưu trữ trên Redis.',
+                proj3Sub: 'Nền tảng lưu trữ đám mây cho doanh nghiệp',
+                proj3Desc: 'Đồng bộ file, chia sẻ có phân quyền (link công khai, có mật khẩu, thời hạn hết hạn), pipeline xử lý tài nguyên bất đồng bộ và tìm kiếm toàn văn tốc độ cao bằng Elasticsearch.',
+                experienceLabel: '04 / kinh nghiệm',
+                experienceTitle: 'Hành trình nghề nghiệp',
+                job1Period: '03/2024 – Nay',
+                job1Desc: 'Backend cho Base ID, Base Talk và Base DrivePro bằng Go.',
+                job2Desc: 'Nền tảng nghiên cứu và giao dịch định lượng: Alpha Factory, backtesting, công cụ trực quan hóa chiến lược và mô phỏng giá.',
+                job3Desc: 'Tác vụ tự động cho hệ thống bot và hệ thống crawler thu thập dữ liệu bằng Elixir và Python.',
+                job4Role: 'Thực tập kỹ sư phần mềm',
+                job4Desc: 'Nhận diện giấy tờ tùy thân bằng MobileNetV2 và tiền xử lý ảnh cho OCR; trực quan hóa dữ liệu và giao dịch tự động trên MT5.',
+                job5Role: 'Giải thưởng nổi bật',
+                job5Org: 'Lập trình thi đấu & Doanh nghiệp',
+                job5Desc: 'Pioneer Engineer of the year, Base.vn (2024) · Giải Ba AI Innovation Challenge, Base.vn (2025) · Giải Nhất Olympic Tin học sinh viên Việt Nam (2020) · Giải Ba ACM-ICPC khu vực (2018, 2021).',
+                job6Period: '2018 – Nay',
+                job6Role: 'Đại học Công nghiệp Hà Nội',
+                job6Org: 'Điện tử và Kỹ thuật truyền thông',
+                btnViewFullResume: 'Xem chi tiết toàn bộ CV (Resume Web)',
+                btnDownloadPDF: 'Tải PDF CV',
+                contactLabel: '05 / liên hệ',
+                contactTitle: 'Có ý tưởng hay vị trí phù hợp? Hãy trò chuyện.',
+                contactText: 'Nếu bạn muốn trao đổi về backend, hệ thống thời gian thực hay nền tảng định danh, cứ gửi email cho tôi.',
+                backToTop: 'Lên đầu trang ↑'
+            },
+            en: {
+                themeLabel: 'Light',
+                themeAria: 'Switch to light theme',
+                navAbout: 'About',
+                navSkills: 'Skills',
+                navProjects: 'Projects',
+                navExperience: 'Experience',
+                navResume: 'Resume / CV',
+                navContact: 'Contact',
+                heroBadge: 'Backend Software Engineer',
+                heroTitle: "Hi, I'm Nguyen Trung Hai.",
+                heroText: "I'm a backend engineer at Base.vn, building identity, real-time communication and cloud storage systems in Go. Before that, I worked on a quantitative research and trading platform.",
+                ctaProjects: 'View projects',
+                ctaContact: 'Get in touch',
+                ctaResume: 'View full resume',
+                aboutLabel: '01 / about',
+                aboutTitle: 'About me',
+                about1: "I'm a software engineer based in Hanoi, working on the backend at Base.vn since March 2024. I started with competitive programming and computer vision projects before moving into high-performance backend systems.",
+                about2: 'At Base.vn I work on an identity platform (OAuth 2.0, OIDC, SAML SSO, MFA, fine-grained authorization with OpenFGA), a multi-tenant real-time notification system, WebRTC video calling infrastructure and the Base DrivePro cloud storage platform.',
+                about3: 'Before that I built a quantitative research and trading platform at INF-Capital. I was named Pioneer Engineer of the year at Base.vn (2024) and have won several student programming contests.',
+                profileStatus: 'Open to engineering collaboration',
+                factRoleLabel: 'ROLE',
+                factRoleVal: 'Software Engineer · Base.vn',
+                factLocLabel: 'LOCATION',
+                factLocVal: 'Hanoi, Vietnam',
+                factEduLabel: 'EDUCATION',
+                factEduVal: 'Hanoi University of Industry',
+                skillsLabel: '02 / skills',
+                skillsTitle: 'Tech I work with',
+                skillDataTitle: 'Data & Queues',
+                skillRealtimeTitle: 'Real-time',
+                skillInfraTitle: 'Security & Infra',
+                projectsLabel: '03 / projects',
+                projectsTitle: 'Things I have built',
+                proj1Sub: 'Identity as a Service platform',
+                proj1Desc: 'OAuth 2.0 / OIDC authentication server, SAML 2.0 SSO, MFA (magic link, TOTP, SMS), fine-grained authorization with OpenFGA, and a multi-tenant real-time notification system on SSE and RabbitMQ.',
+                proj2Sub: 'Peer-to-peer calls & conferencing',
+                proj2Desc: 'WebRTC infrastructure: WebSocket signaling for SDP and ICE, SIP, STUN/TURN for NAT traversal, plus APIs for the meeting lifecycle and participant state kept in Redis.',
+                proj3Sub: 'Cloud storage platform for enterprise',
+                proj3Desc: 'File sync, permission-aware sharing (public, password-protected and expiring links), an asynchronous asset processing pipeline and full-text search with Elasticsearch.',
+                experienceLabel: '04 / experience',
+                experienceTitle: 'Career so far',
+                job1Period: '03/2024 – Present',
+                job1Desc: 'Backend for Base ID, Base Talk and Base DrivePro in Go.',
+                job2Desc: 'Quantitative research and trading platform: Alpha Factory, backtesting, strategy visualization tools and price simulation.',
+                job3Desc: 'Automated tasks for a bot system and a data crawler, built with Elixir and Python.',
+                job4Role: 'Intern Software Engineer',
+                job4Desc: 'ID card detection with MobileNetV2 and image pre-processing for OCR; data visualization and automated trading on MT5.',
+                job5Role: 'Selected awards',
+                job5Org: 'Competitive programming & Company awards',
+                job5Desc: 'Pioneer Engineer of the year, Base.vn (2024) · Third prize, AI Innovation Challenge, Base.vn (2025) · First prize, Vietnam student olympiad in information technology (2020) · Third prize, ACM-ICPC regional contest (2018, 2021).',
+                job6Period: '2018 – Present',
+                job6Role: 'Hanoi University of Industry',
+                job6Org: 'Electronics & Communication Engineering',
+                btnViewFullResume: 'View full resume (Interactive Web)',
+                btnDownloadPDF: 'Download PDF CV',
+                contactLabel: '05 / contact',
+                contactTitle: "Got an idea or a role in mind? Let's talk.",
+                contactText: 'If you want to talk about backend, real-time systems or identity platforms, send me an email.',
+                backToTop: 'Back to top ↑'
+            }
+        };
+
+        let currentLang = localStorage.getItem('lang') || 'vi';
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+
+            const t = i18nData[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.textContent = t[key];
+                }
+            });
+
+            document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            // Update theme text based on language & theme
+            updateThemeButtonText();
+        }
+
+        function updateTheme(theme) {
+            currentTheme = theme;
+            localStorage.setItem('theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+
+            const iconSpan = document.getElementById('theme-icon');
+            if (theme === 'dark') {
+                iconSpan.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>';
+            } else {
+                iconSpan.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>';
+            }
+
+            updateThemeButtonText();
+        }
+
+        function updateThemeButtonText() {
+            const isDark = currentTheme === 'dark';
+            const textEl = document.getElementById('theme-text');
+            const toggleBtn = document.getElementById('btn-theme');
+
+            if (currentLang === 'vi') {
+                textEl.textContent = isDark ? 'Sáng' : 'Tối';
+                toggleBtn.setAttribute('aria-label', isDark ? 'Chuyển sang giao diện sáng' : 'Chuyển sang giao diện tối');
+            } else {
+                textEl.textContent = isDark ? 'Light' : 'Dark';
+                toggleBtn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+            }
+        }
+
+        // Event listeners
+        document.getElementById('btn-vi').addEventListener('click', () => updateLanguage('vi'));
+        document.getElementById('btn-en').addEventListener('click', () => updateLanguage('en'));
+        document.getElementById('btn-theme').addEventListener('click', () => {
+            updateTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Initialize state
+        updateTheme(currentTheme);
+        updateLanguage(currentLang);
+    </script>
 </body>
 </html>
